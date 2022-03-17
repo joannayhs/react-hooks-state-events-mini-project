@@ -23,9 +23,7 @@ function NewTaskForm({categories, onTaskFormSubmit}) {
       <label>
         Category
         <select name="category" onChange={(e) => setCat(e.target.value)}>
-          {categories.map( category => {
-            return category === "All" ? null : <option key={category} value={category}>{category}</option>
-          })}
+          {categories.map( category => category === "All" ? null : <option key={category} value={category}>{category}</option>)}
         </select>
       </label>
       <input type="submit" value="Add task" />
